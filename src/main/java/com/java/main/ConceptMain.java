@@ -8,6 +8,6 @@ public class ConceptMain extends SpringBootServletInitializer {
 //		SpringApplication.run(ConceptMain.class, args);
 
 		com.java.streams.api.Streams streams = new com.java.streams.api.Streams();
-		streams.iterate();
+		streams.differentFilteringExamples();
 	}
 }
