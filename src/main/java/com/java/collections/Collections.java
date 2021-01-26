@@ -3,9 +3,9 @@ package com.java.collections;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
 import java.util.TreeSet;
@@ -15,9 +15,56 @@ import com.java.printer.Printer;
 public class Collections {
 
 	public void collectionMainMethod() {
-		orderedMap();
+		linkedHashSet();
 	}
 
+	private void linkedHashSet() {
+		
+//		LinkedHashSet maintains a linked list of the entries in the set, 
+//		in the order in which they were inserted. This allows insertion-order iteration over the set.
+		
+		System.out.println("linkedHashSet");
+		
+		LinkedHashSet hs = new LinkedHashSet();
+
+		// add elements to the hash set
+		hs.add("B");
+		hs.add("A");
+		hs.add("D");
+		hs.add("E");
+		hs.add("C");
+		hs.add("F");
+		Printer.printHashSet(hs);
+		System.out.println("adding value  D to doubleOrderingMap");
+		hs.add("D");
+		Printer.printHashSet(hs);
+		System.out.println("adding value  K to doubleOrderingMap");
+		hs.add("K");
+		Printer.printHashSet(hs);
+		System.out.println("adding value  T to doubleOrderingMap");
+		hs.add("T");
+		Printer.printHashSet(hs);
+
+		Iterator<String> iter = hs.iterator();
+
+		while (iter.hasNext())
+			System.out.println(iter.next());
+		
+		
+		System.out.println("hashSet");
+		HashSet HashSet = new HashSet();
+
+		// add elements to the hash set
+		HashSet.add("B");
+		HashSet.add("A");
+		HashSet.add("D");
+		HashSet.add("E");
+		HashSet.add("C");
+		HashSet.add("F");
+		System.out.print(HashSet);	
+	
+		
+	}
 	private void orderedMap() {
 		System.out.println("orderedMap");
 		// Create a hash map
@@ -93,6 +140,7 @@ public class Collections {
 		System.out.println(" LinkedList Elements");
 		System.out.print("\t" + l1);
 		System.out.println();
-		System.out.println("to UpperCase:");
+		System.out.println("to UpperCase:");		
+		
 	}
 }

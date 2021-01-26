@@ -1,6 +1,7 @@
 package com.java.printer;
 
 import java.util.Iterator;
+import java.util.LinkedHashSet;
 import java.util.Map;
 import java.util.Set;
 
@@ -20,6 +21,10 @@ public class Printer {
 	      }
 	      System.out.println();
 		
+	}
+
+	public static void printHashSet(LinkedHashSet hs) {
+		   System.out.print(hs);	
 	}
 
 }
